@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+    <head>
+        <title>Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="src/output.css" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/9fc27c8cb3.js"
+            crossorigin="anonymous"></script>
+    </head>
+    <body class="bg-gradient-to-r from-cyan-300 to-cyan-700">
+        <div class="bg-white">
+            <header class="absolute inset-x-0 top-0 z-50">
+                <nav
+                    class="fixed top-0 right-0 left-0 flex items-center justify-between p-6 lg:px-8 bg-gradient-to-r from-cyan-300 to-cyan-700">
+                    <div class="flex lg:flex-1">
+                        <a href="#" class="-m-1.5 p-1.5">
+                            <img class="h-14 w-auto mix-blend-multiply"
+                                src="src/imgs/logo.png" alt>
+                        </a>
+                    </div>
+                    <div class="flex lg:hidden">
+                        <button type="button"
+                            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                            id="menu-toggle">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor"
+                                aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div
+                        class="hidden lg:flex lg:gap-x-12 px-10 justify-center items-center">
+                        <a href="#"
+                            class="text-sm/2 font-semibold text-slate-800 hover:underline hover:underline-offset-4">Home</a>
+                        <a href="#"
+                            class="text-sm/2 font-semibold text-slate-800 hover:underline hover:underline-offset-4">About</a>
+                        <a href="#"
+                            class="text-sm/2 font-semibold text-slate-800 hover:underline hover:underline-offset-4">Skills</a>
+                        <a href="#"
+                            class="text-sm/2 font-semibold text-slate-800 hover:underline hover:underline-offset-4">Projects</a>
+                        <a href="#"
+                            class="text-sm/2 font-semibold text-slate-800 hover:underline hover:underline-offset-4">Experience</a>
+                        <a href="#"
+                            class="text-sm/2 font-semibold text-slate-800 rounded-md border-2 border-cyan-400 py-2 px-4 hover:text-zinc-100 hover:bg-cyan-700">Resume</a>
+                    </div>
+                </nav>
+                <!-- Mobile menu, show/hide based on menu open state. -->
+                <div class="lg:hidden" role="dialog" aria-modal="true"
+                    id="mobile-menu" style="display: none;">
+                    <!-- Background backdrop, show/hide based on slide-over state. -->
+                    <div class="fixed inset-0 z-50 bg-black opacity-50"
+                        id="backdrop">
+                    </div>
+                    <div
+                        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 bg-gradient-to-r from-cyan-300 to-cyan-700">
+                        <div class="flex items-center justify-between">
+                            <a href="#" class="-m-1.5 p-1.5">
+                                <img class="h-14 w-auto mix-blend-multiply"
+                                    src="imgs/logo.png"
+                                    alt="Logo">
+                            </a>
+                            <button type="button"
+                                class="-m-2.5 rounded-md p-2.5 text-gray-700"
+                                id="close-menu">
+                                <span class="sr-only">Close menu</span>
+                                <svg class="h-6 w-6" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true"
+                                    data-slot="icon">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="mt-6 flow-root">
+                            <div class="-my-6 divide-y divide-gray-500/10">
+                                <div class="space-y-2 py-6">
+                                    <a href="#"
+                                        class="text-center block rounded-lg px-3 py-2 text-base/7 font-semibold text-zinc-700 hover:bg-gray-50">Home</a>
+                                    <a href="#"
+                                        class="text-center block rounded-lg px-3 py-2 text-base/7 font-semibold text-zinc-700 hover:bg-gray-50">About</a>
+                                    <a href="#"
+                                        class="text-center block rounded-lg px-3 py-2 text-base/7 font-semibold text-zinc-700 hover:bg-gray-50">Services</a>
+                                    <a href="#"
+                                        class="text-center block rounded-lg px-3 py-2 text-base/7 font-semibold text-zinc-700 hover:bg-gray-50">Projects</a>
+                                    <a href="#"
+                                        class="text-center block rounded-lg px-3 py-2 text-base/7 font-semibold text-zinc-700 hover:bg-gray-50">Contact</a>
+                                    <div class="flex-grow h-px bg-white"></div>
+                                    <div class="flex justify-center pt-4">
+                                        <a href="#"
+                                            class="text-center block rounded-lg px-14 py-1 text-base/7 font-semibold text-zinc-700 hover:bg-gray-50 border-2 border-white">Resume</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- <div
+            class="grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-2">
+           
+            <div
+                class="flex flex-col gap-1 pt-0 p-10 lg:p-20 lg:pt-36 max-sm:order-2 text-center lg:text-left">
+                <h1
+                    class="text-4xl lg:text-7xl font-bold tracking-tight text-slate-900 ">Kenith
+                    S. Igot</h1>
+                <p
+                    class="mt-6 text-pretty text-base font-medium text-slate-900 lg:text-xl/8 leading-relaxed">
+                    To get hold of a company developer position that will suits
+                    my skills and expertise.
+                    With a passion for technology and development, I am a <i
+                        class="font-bold">Website Developer</i>
+                    and <i class="font-bold">Tech Support</i> who dedicates my
+                    work and expertise to developing
+                    and managing real-life businesses and small enterprises.
+                </p>
+                <div class="mt-10">
+                    <a href="#"
+                        class="w-auto rounded-md bg-cyan-700 px-10 py-3 text-base font-semibold text-slate-800 shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:text-white">
+                        View My Work →
+                    </a>
+                </div>
+            </div> -->
+
+            <!-- Image container -->
+            <!-- <div class="flex flex-col gap-1 lg:order-1 lg:flex lg:p-14">
+                <div class="flex justify-center items-center h-full">
+                    <img src="src/imgs/pic.png" alt="Profile Picture"
+                        class="h-96 object-cover rounded-full filter drop-shadow-[100px_25px_35px_rgba(0,0,0,0.3)]">
+                </div>
+            </div> -->
+        </div>
+
+        <!-- About Section -->
+        <div class="px-5 mt-50">
+            <div
+                class="relative isolate overflow-hidden bg-gray-900 shadow-2xl max-sm:rounded-3xl sm:rounded-3xl lg:flex lg:gap-x-1">
+                <svg viewBox="0 0 1024 1024"
+                    class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+                    aria-hidden="true">
+                    <circle cx="512" cy="512" r="512"
+                        fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                        fill-opacity="0.7" />
+                    <defs>
+                        <radialgradient
+                            id="759c1415-0410-454c-8f7c-9a820de03641">
+                            <stop stop-color="#7775D6" />
+                            <stop offset="1" stop-color="#E935C1" />
+                        </radialgradient>
+                    </defs>
+                </svg>
+
+                <div>
+                    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+                        <div class="flex flex-col gap-1 p-10 lg:p-20 pt-0 lg:pt-48 max-sm:order-2 text-center lg:text-left">
+                            <h1
+                                class="text-4xl lg:text-7xl font-bold tracking-tight text-white">Kenith S. Igot</h1>
+                            <p
+                                class="mt-6 text-pretty text-base font-medium text-white lg:text-xl/8 leading-relaxed">
+                                To get hold of a company developer position that will suits
+                                my skills and expertise.
+                                With a passion for technology and development, I am a <i
+                                    class="font-bold">Website Developer</i>
+                                and <i class="font-bold">Tech Support</i> who dedicates my
+                                work and expertise to developing
+                                and managing real-life businesses and small enterprises.
+                            </p>
+                            <div class="mt-10">
+                                <a href="#"
+                                    class="w-auto rounded-md bg-cyan-700 px-10 py-3 text-base font-semibold text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:text-slate-900">
+                                    View My Work →
+                                </a>
+                            </div>
+                        </div>
+    
+                        <!-- Image container -->
+                        <div class="flex flex-col gap-1 lg:order-1">
+                            <div class="flex justify-center items-center h-full">
+                                <img src="src/imgs/pic.png" alt="Profile Picture"
+                                    class="h-96 object-cover mt-16 lg:mt-20 rounded-full filter drop-shadow-[30px_15px_30px_rgba(255,255,255,1)]">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Section -->
+                    <div class="px-5 lg:px-52 lg:pt-72">
+                        <div class="text-center lg:mx-0 lg:flex-auto lg:pt-20 lg:pb-16 lg:text-left">
+                            <div class="grid grid-cols-1 gap-8">
+                                <!-- Left Column -->
+                                <div class="flex flex-col text-center">
+                                    <h2
+                                        class="text-3xl lg:text-8xl font-extrabold tracking-tight text-white underline underline-offset-[12px]">About
+                                        Me</h2>
+                                    <ul
+                                        class="text-white text-base lg:text-xl/8 mt-8 space-y-3 pt-4">
+                                        <li><span aria-hidden="true">→ Graduate of
+                                                Computer Engineering</span></li>
+                                        <li><span aria-hidden="true">→ Skilled in the
+                                                Web development system.</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="flex flex-col text-center pt-8">
+                                    <h2
+                                        class="text-3xl lg:text-6xl font-extrabold tracking-tight text-white underline underline-offset-[12px]">How
+                                        I work</h2>
+                                    <p class="pt-6 text-white lg:text-xl/8">
+                                        <i>
+                                            "I approach each project as a unique challenge and focus on building solutions that align with user needs. I love collaborating with designers, product managers, and other developers to ensure that each piece of the project comes together perfectly."
+                                        </i>
+                                    </p>
+                                    <p class="pt-4 text-white lg:text-xl/8">
+                                        <i>
+                                            "My workflow involves thorough planning, rapid prototyping, and iterative improvements. I believe in continuous learning, and I'm constantly exploring new tools and technologies to bring the best solutions to the table."
+                                        </i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div>
+                        <div class="space-y-5 pt-52">
+                            <h2
+                                class="text-center text-3xl lg:text-8xl font-extrabold tracking-tight text-white underline underline-offset-[12px]">Skills
+                            </h2>
+                            <div class="flex flex-col justify-center items-center">
+                                <div class="pt-12">  
+                                        <span class="lg:text-6xl text-white font-extrabold hover:text-slate-800">
+                                            Development
+                                        </span>  
+                                </div>
+                            
+                                <div class="pt-5">
+                                    <ul class="text-center">
+                                        <li
+                                            class="inline-flex items-center lg:text-3xl text-white px-4 py-2">
+                                            <i class="me-1 fa-brands fa-html5"></i>
+                                            <span>HTML</span>
+                                        </li>
+                                        <li
+                                            class="inline-flex items-center lg:text-3xl text-white  px-4 py-2">
+                                            <i class="me-1 fa-brands fa-css3-alt"></i>
+                                            <span>CSS</span>
+                                        </li>
+                                        <li
+                                            class="inline-flex items-center lg:text-3xl text-white px-4 py-2">
+                                            <i class="me-1 fa-brands fa-square-js"></i>
+                                            <span>JS</span>
+                                        </li>
+                                        <li
+                                            class="inline-flex items-center lg:text-3xl text-white px-4 py-2">
+                                            <i class="me-1 fa-brands fa-html5"></i>
+                                            <span>PHP</span>
+                                        </li>
+                                        <li
+                                            class=" inline-flex items-center lg:text-3xl text-white px-4 py-2">
+                                            <i class="me-1 fa-solid fa-database "></i>
+                                            <span>SQL</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex flex-col justify-center items-center">
+                                <div class="pt-10">  
+                                        <span class="lg:text-6xl text-white font-extrabold hover:text-slate-800">
+                                            Tools
+                                        </span>  
+                                </div>
+                            
+                                <div class="pt-5">
+                                    <ul class="text-center">
+                                        <li
+                                            class=" inline-flex items-center lg:text-3xl text-white px-4 py-2">
+                                            <i class="me-1 fa-brands fa-html5"></i>
+                                            <span>Tailwind CSS</span>
+                                        </li>
+                                        <li
+                                            class=" inline-flex items-center lg:text-3xl text-white px-4 py-2">
+                                            <i class="me-1 fa-brands fa-css3-alt"></i>
+                                            <span>React</span>
+                                        </li>
+                                        <li
+                                            class=" inline-flex items-center lg:text-3xl text-white px-4 py-2">
+                                            <i class="me-1 fa-brands fa-square-js"></i>
+                                            <span>Bootstrap</span>
+                                        </li>
+                                    
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex flex-col justify-center items-center">
+                                <div class="pt-10">  
+                                        <span class="lg:text-6xl text-white px-4 font-extrabold hover:text-slate-800">
+                                            Collaborations
+                                        </span>  
+                                </div>
+                            
+                                <div class="pt-5">
+                                    <ul class="text-center">
+                                        <li
+                                            class="inline-flex items-center lg:text-3xl text-white px-4 py-2">
+                                            <i class="me-1 fa-brands fa-github"></i>
+                                            <span>Github</span>
+                                        </li>
+                                        <li
+                                            class="inline-flex items-center lg:text-3xl text-white px-4 py-2">
+                                            <i class="me-1 fa-solid fa-file-excel"></i>
+                                            <span>Excel</span>
+                                        </li>
+                                        <li
+                                            class="inline-flex items-center lg:text-3xl text-white px-4 py-2">
+                                            <i class="me-1 fa-solid fa-chart-simple"></i>
+                                            <span>LucidChart</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col">                         
+                                <div class="flex flex-col sm:flex-row lg:flex-row justify-evenly">
+                                    <div class="pt-10">
+                                        <span class="lg:text-5xl text-white font-extrabold hover:text-slate-800">
+                                            Design Expertise
+                                        </span>  
+                                        <ul class="flex flex-col pt-5 space-y-3">
+                                            <li
+                                                class="inline-flex items-center lg:text-3xl text-white">
+                                                <div class="hidden lg:block">
+                                                    <i class="fa-solid fa-check me-4"></i>
+                                                </div>
+                                                <span>Web Development</span>
+                                            </li>
+                                            <li
+                                                class="inline-flex items-center lg:text-3xl text-white">
+                                                <div class="hidden lg:block">
+                                                    <i class="fa-solid fa-check me-4"></i>
+                                                </div>
+                                                <span>Design System</span>
+                                            </li>
+                                            <li
+                                                class="inline-flex items-center lg:text-3xl text-white">       
+                                                <div class="hidden lg:block">
+                                                    <i class="fa-solid fa-check me-4"></i>
+                                                </div>
+                                                <span>Custom Illustrations</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="pt-10">
+                                        <span class="block lg:text-5xl text-white font-extrabold hover:text-slate-800">
+                                            Personal Skills
+                                        </span>                               
+                                        <ul class="flex flex-col pt-5 space-y-3">
+                                            <li
+                                                class="inline-flex items-center lg:text-3xl text-white ">
+                                                <div class="hidden lg:block">
+                                                    <i class="fa-solid fa-check me-4"></i>
+                                                </div>
+                                                <span>Team Player</span>
+                                            </li>
+                                            <li
+                                                class="inline-flex items-center lg:text-3xl text-white">
+                                                <div class="hidden lg:block">
+                                                    <i class="fa-solid fa-check me-4"></i>
+                                                </div>
+                                                <span>Communication Skill</span>
+                                            </li>
+                                            <li
+                                                class="inline-flex items-center lg:text-3xl text-white">
+                                                <div class="hidden lg:block">
+                                                    <i class="fa-solid fa-check me-4"></i>
+                                                </div>
+                                                <span>Problem Solving</span>
+                                            </li>
+                                            <li
+                                                class="inline-flex items-center lg:text-3xl text-white">       
+                                                <div class="hidden lg:block">
+                                                    <i class="fa-solid fa-check me-4"></i>
+                                                </div>
+                                                <span>Time management</span>
+                                            </li>
+                                            <li
+                                            class="inline-flex items-center lg:text-3xl text-white">       
+                                            <div class="hidden lg:block">
+                                                <i class="fa-solid fa-check me-4"></i>
+                                            </div>
+                                            <span>Flexible, Fast Learner</span>
+                                        </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>     
+                        </div><br><br>
+                        <!-- End List -->
+                    </div>
+
+                    <!-- Projects Section -->
+                    <div class="px-20 pt-52">
+                        <!-- Card Blog -->
+                        <div class="max-w-[85rem] px-4 py-7 sm:px-6 lg:px-4 lg:py-20 mx-auto">
+                            <h2
+                                class="text-center text-3xl lg:text-8xl font-extrabold tracking-tight text-white underline underline-offset-[24px]">Projects
+                            </h2>
+                            <div class="text-center pt-12">
+                                <p class="text-white lg:text-xl/8">showcasing of innovative projects demonstrating expertise in modern web development and design.</p>
+                            </div>
+                           
+                            <!-- Grid -->
+                            <div class="grid lg:grid-cols-2 lg:gap-y-16 gap-10 pt-16 lg:pt-24">
+                                <!-- Card -->
+                                <a
+                                    class="group block rounded-xl overflow-hidden focus:outline-none"
+                                    href="#">
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
+                                        <div
+                                            class="shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-56">
+                                            <img
+                                                class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl"
+                                                src="src/imgs/project1.JPG"
+                                                alt="Blog Image">
+                                        </div>
+
+                                        <div class="grow">
+                                            <h3
+                                                class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
+                                                Smart Trash Bin UI
+                                            </h3>
+                                            <p
+                                                class="mt-3 text-gray-600 dark:text-neutral-400">
+                                                Thesis project for real time monitoring
+                                                of trash level inside the bins.
+                                            </p>
+                                            <p
+                                                class="mt-3 text-gray-600 dark:text-neutral-400">
+                                                <i
+                                                    class="fa-brands fa-html5 text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-css3-alt text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-square-js text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-php text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-bootstrap text-gray-600 dark:text-neutral-400 text-3xl"></i>
+                                            </p>
+                                            <p
+                                                class="mt-4 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
+                                                Read more
+                                                <svg class="shrink-0 size-4"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"><path
+                                                        d="m9 18 6-6-6-6" /></svg>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- End Card -->
+
+                                <!-- Card -->
+                                <a
+                                    class="group block rounded-xl overflow-hidden focus:outline-none"
+                                    href="#">
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
+                                        <div
+                                            class="shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-56">
+                                            <img
+                                                class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl"
+                                                src="src/imgs/project2.png"
+                                                alt="Blog Image">
+                                        </div>
+
+                                        <div class="grow">
+                                            <h3
+                                                class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
+                                                House Design Landing Page UI
+                                            </h3>
+                                            <p
+                                                class="mt-3 text-gray-600 dark:text-neutral-400">
+                                                House Landing Page with different
+                                                components,
+                                            </p>
+                                            <p
+                                                class="mt-3 text-gray-600 dark:text-neutral-400">
+                                                <i
+                                                    class="fa-brands fa-html5 text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-css3-alt text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-bootstrap text-gray-600 dark:text-neutral-400 text-3xl"></i>
+                                            </p>
+                                            <p
+                                                class="mt-4 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
+                                                Read more
+                                                <svg class="shrink-0 size-4"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"><path
+                                                        d="m9 18 6-6-6-6" /></svg>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- End Card -->
+
+                                <!-- Card -->
+                                <a
+                                    class="group block rounded-xl overflow-hidden focus:outline-none"
+                                    href="#">
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
+                                        <div
+                                            class="shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-56">
+                                            <img
+                                                class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl"
+                                                src="src/imgs/project3.png"
+                                                alt="Blog Image">
+                                        </div>
+
+                                        <div class="grow">
+                                            <h3
+                                                class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
+                                                School Landing Page UI
+                                            </h3>
+                                            <p
+                                                class="mt-3 text-gray-600 dark:text-neutral-400">
+                                                School landing page UI copy using
+                                                boostrap, and responsive content.
+                                            </p>
+                                            <p
+                                                class="mt-3 text-gray-600 dark:text-neutral-400">
+                                                <i
+                                                    class="fa-brands fa-html5 text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-css3-alt text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-bootstrap text-gray-600 dark:text-neutral-400 text-3xl"></i>
+                                            </p>
+                                            <p
+                                                class="mt-4 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
+                                                Read more
+                                                <svg class="shrink-0 size-4"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"><path
+                                                        d="m9 18 6-6-6-6" /></svg>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- End Card -->
+
+                                <!-- Card -->
+                                <a
+                                    class="group block rounded-xl overflow-hidden focus:outline-none"
+                                    href="#">
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
+                                        <div
+                                            class="shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-56">
+                                            <img
+                                                class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl"
+                                                src="src/imgs/project4.png"
+                                                alt="Blog Image">
+                                        </div>
+
+                                        <div class="grow">
+                                            <h3
+                                                class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
+                                                Printing Services System
+                                            </h3>
+                                            <p
+                                                class="mt-3 text-gray-600 dark:text-neutral-400">
+                                                Real life business based project for
+                                                printing system, inventory system.
+                                            </p>
+                                            <p
+                                                class="mt-3 text-gray-600 dark:text-neutral-400">
+                                                <i
+                                                    class="fa-brands fa-html5 text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-css3-alt text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-square-js text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-php text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-bootstrap text-gray-600 dark:text-neutral-400 text-3xl"></i>
+                                            </p>
+                                            <p
+                                                class="mt-4 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
+                                                Read more
+                                                <svg class="shrink-0 size-4"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"><path
+                                                        d="m9 18 6-6-6-6" /></svg>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- End Card -->
+
+                                <!-- Card -->
+                                <a
+                                    class="group block rounded-xl overflow-hidden focus:outline-none"
+                                    href="#">
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
+                                        <div
+                                            class="shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-56">
+                                            <img
+                                                class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl"
+                                                src="src/imgs/project5.JPG"
+                                                alt="Blog Image">
+                                        </div>
+
+                                        <div class="grow">
+                                            <h3
+                                                class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
+                                                My Portfolio
+                                            </h3>
+                                            <p
+                                                class="mt-3 text-gray-600 dark:text-neutral-400">
+                                                Portfolio project for showcasing skills
+                                                and projects.
+                                            </p>
+                                            <p
+                                                class="mt-3 text-gray-600 dark:text-neutral-400">
+                                                <i
+                                                    class="fa-brands fa-html5 text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-css3-alt text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-bootstrap text-gray-600 dark:text-neutral-400 text-3xl"></i>
+                                            </p>
+                                            <p
+                                                class="mt-4 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
+                                                Read more
+                                                <svg class="shrink-0 size-4"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"><path
+                                                        d="m9 18 6-6-6-6" /></svg>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- End Card -->
+
+                                <!-- Card -->
+                                <a
+                                    class="group block rounded-xl overflow-hidden focus:outline-none"
+                                    href="#">
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
+                                        <div
+                                            class="shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-56">
+                                            <img
+                                                class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl"
+                                                src="src/imgs/project6.JPG"
+                                                alt="Blog Image">
+                                        </div>
+
+                                        <div class="grow">
+                                            <h3
+                                                class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
+                                                Customer Feedback Data Visualization
+                                            </h3>
+                                            <p
+                                                class="mt-3 text-gray-600 dark:text-neutral-400">
+                                                Data Visualization through Chart and Bar
+                                                Graph, implementing API.
+                                            </p>
+                                            <p
+                                                class="mt-3 text-gray-600 dark:text-neutral-400">
+                                                <i
+                                                    class="fa-brands fa-html5 text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-css3-alt text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-square-js text-gray-600 dark:text-neutral-400 text-3xl mr-2"></i>
+                                                <i
+                                                    class="fa-brands fa-bootstrap text-gray-600 dark:text-neutral-400 text-3xl"></i>
+                                                <i
+                                                    class="fa-solid fa-gear text-gray-600 dark:text-neutral-400 text-3xl"></i>
+                                            </p>
+                                            <p
+                                                class="mt-4 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
+                                                Read more
+                                                <svg class="shrink-0 size-4"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"><path
+                                                        d="m9 18 6-6-6-6" /></svg>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- End Card -->
+                            </div>
+                            <!-- End Grid -->
+                        </div>
+                        <!-- End Card Blog -->
+                    </div>
+
+                    <div class="pt-52">
+                        <!-- Timeline -->
+                        <div>
+                            <h2
+                                class="text-center text-3xl lg:text-8xl font-extrabold tracking-tight text-white underline underline-offset-[22px]">
+                                Experience</h2>
+                            <!-- Item -->
+                            <div class="flex flex-col items-center pt-20">
+                                <div class="group flex gap-x-5">
+                                    <!-- Icon -->
+                                    <div
+                                        class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[1px] after:bg-white">
+                                        <div
+                                            class="relative z-10 size-6 flex justify-center items-center">
+                                            <i class="lg:text-3xl text-white fa-solid fa-briefcase"></i>
+                                        </div>
+                                    </div>
+                                    <!-- End Icon -->
+
+                                    <!-- Right Content -->
+                                    <div class="grow pb-8 group-last:pb-0">
+                                        <h3
+                                            class="mb-1 text-sm text-white">
+                                            2023 - Present
+                                        </h3>
+
+                                        <p
+                                            class="font-semibold text-xl text-white">
+                                            Web Developer & Programmer
+                                        </p>
+
+                                        <p
+                                            class="mt-1 text-base text-white">
+                                            Development of personal project-based and some
+                                            client
+                                            websites.
+                                        </p>
+
+                                        <ul class="list-disc ms-6 mt-3 space-y-1.5">
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Customer Service Website that utilizes using
+                                                of API.
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                User type login system implementation,
+                                                restriction
+                                                of viewing of pages.
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Website front-end design and responsiveness.
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Backend implementation joint table,
+                                                relationship of
+                                                tables.
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                CRUD system implementation
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Form report results, visualization through
+                                                graphs
+                                                and charts.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- End Right Content -->
+
+                                </div>
+                                <!-- End Item -->                   
+
+                                <!-- Item -->
+                                <div class="group relative flex gap-x-5">
+                                    <!-- Icon -->
+                                    <div
+                                        class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-1px] after:bg-white">
+                                        <div
+                                            class="relative z-10 size-6 flex justify-center items-center">
+                                            <i class="lg:text-3xl text-white fa-solid fa-briefcase"></i>
+                                        </div>
+                                    </div>
+                                    <!-- End Icon -->
+
+                                    <!-- Right Content -->
+                                    <div class="grow pb-8 group-last:pb-0">
+                                        <h3
+                                            class="mb-1 text-sm text-white">
+                                            2023 - Present
+                                        </h3>
+
+                                        <p
+                                            class="font-semibold text-xl text-white">
+                                            Thesis Project - Smart Trash Bin
+                                        </p>
+
+                                        <p
+                                            class="mt-1 text-base text-white">
+                                            Development of personal project-based and some
+                                            client
+                                            websites.
+                                        </p>
+
+                                        <ul class="list-disc ms-6 mt-3 space-y-1.5">
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Customer Service Website that utilizes using
+                                                of API.
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                User type login system implementation,
+                                                restriction
+                                                of viewing of pages.
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Website front-end design and responsiveness.
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Backend implementation joint table,
+                                                relationship of
+                                                tables.
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                CRUD system implementation
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Form report results, visualization through
+                                                graphs
+                                                and charts.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- End Right Content -->
+                                </div>
+                                <!-- End Item -->
+
+                                 <!-- Item -->
+                                 <div class="group relative flex gap-x-5 ml-0 lg:ml-9">
+                                    <!-- Icon -->
+                                    <div
+                                        class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[1px] after:bg-white">
+                                        <div
+                                            class="relative z-10 size-6 flex justify-center items-center">
+                                            <i class="lg:text-3xl text-white fa-solid fa-briefcase"></i>
+                                        </div>
+                                    </div>
+                                    <!-- End Icon -->
+
+                                    <!-- Right Content -->
+                                    <div class="grow pb-8 group-last:pb-0">
+                                        <h3
+                                            class="mb-1 text-sm text-white">
+                                            April 2023 - June 2023
+                                        </h3>
+
+                                        <p
+                                            class="font-semibold text-xl text-white">
+                                            Programmer Intern
+                                        </p>
+
+                                        <p
+                                            class="mt-1 text-base text-white">
+                                            Programmers section that develops E-commerce
+                                            website,
+                                            and employee portal.
+                                        </p>
+
+                                        <ul class="list-disc ms-6 mt-3 space-y-1.5">
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Development of an E-commerce Website,
+                                                Employee
+                                                Portal.
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Implementation, Design of Front-end
+                                                Interface.
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Data management, Back-end implementation
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Invoice System development, product print
+                                                invoice
+                                                template.
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Inventory System, Data fetching, filtration
+                                                of
+                                                different data and details.
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Inventory feedback report interface,
+                                                customer
+                                                service.
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Maintaining code quality assurance,
+                                                flexibility, and
+                                                efficiency.
+                                            </li>
+                                            <li
+                                                class="ps-1 text-base text-white">
+                                                Learning high-level versions of Datatables,
+                                                PHP, and
+                                                implementation.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- End Right Content -->
+
+                                </div>
+                                <!-- End Item -->
+                            </div>
+
+                        </div>
+                        <!-- End Timeline -->
+                    </div>
+                </div>  
+            </div>
+        </div><br><br>
+
+        <script>
+          // JavaScript to toggle mobile menu visibility
+          const menuToggle = document.getElementById("menu-toggle");
+          const mobileMenu = document.getElementById("mobile-menu");
+          const closeMenu = document.getElementById("close-menu");
+          const backdrop = document.getElementById("backdrop");
+      
+          menuToggle.addEventListener("click", function() {
+            mobileMenu.style.display = "block"; // Show the menu
+          });
+      
+          closeMenu.addEventListener("click", function() {
+            mobileMenu.style.display = "none"; // Hide the menu
+          });
+      
+          backdrop.addEventListener("click", function() {
+            mobileMenu.style.display = "none"; // Hide the menu if backdrop is clicked
+          });
+        </script>
+    </body>
+
+</html>
